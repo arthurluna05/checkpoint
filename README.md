@@ -15,8 +15,11 @@ disciplina Desenvolvimento Mobile — UNIT 2026, Prof. Petros Barreto.
 
 ## Aparelho de testes
 
-| Item | Valor |
-|---|---|
+| Item   | Valor                |
+| ------ | -------------------- |
 | Modelo | (preencha no Lab 04) |
 
 ![Lab 02](docs/prints/lab02-template.png)
+![Lab 03](docs/prints/lab03-lista.png)
+
+| 03 | Template removido; `app.dart`, `VisitasPage` e `VisitaCard`; botão de concluída com `setState` |
