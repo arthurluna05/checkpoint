@@ -25,6 +25,7 @@ class _VisitaCardState extends State<VisitaCard> {
     setState(() {
       _concluida = !_concluida;
     });
+
     debugPrint('VisitaCard "${widget.titulo}" → concluída = $_concluida');
   }
 
@@ -37,7 +38,9 @@ class _VisitaCardState extends State<VisitaCard> {
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Avatar com a inicial do cliente
             CircleAvatar(
               child: Text(
                 widget.cliente.isNotEmpty
@@ -45,18 +48,56 @@ class _VisitaCardState extends State<VisitaCard> {
                     : '?',
               ),
             ),
+
             const SizedBox(width: 16),
+
+            // Informações da visita
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // Título
                   Text(widget.titulo, style: tema.textTheme.titleMedium),
+
+                  const SizedBox(height: 4),
+
+                  // Nome do cliente
                   Text(widget.cliente),
-                  Text(widget.endereco, style: tema.textTheme.bodySmall),
-                  Text(widget.horario, style: tema.textTheme.labelLarge),
+
+                  const SizedBox(height: 12),
+
+                  // Endereço
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Icon(Icons.location_on, size: 18),
+                      const SizedBox(width: 4),
+                      Expanded(child: Text(widget.endereco, softWrap: true)),
+                    ],
+                  ),
+
+                  const SizedBox(height: 8),
+
+                  // Horário
+                  Row(
+                    children: [
+                      const Icon(Icons.access_time, size: 18),
+                      const SizedBox(width: 4),
+                      Expanded(
+                        child: Text(
+                          widget.horario,
+                          style: tema.textTheme.labelLarge,
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
+
+            const SizedBox(width: 8),
+
+            // Botão para concluir ou reabrir a visita
             IconButton(
               onPressed: _alternarConcluida,
               tooltip: _concluida
