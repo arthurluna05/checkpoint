@@ -25,6 +25,7 @@ class _VisitaCardState extends State<VisitaCard> {
     setState(() {
       _concluida = !_concluida;
     });
+    debugPrint('VisitaCard "${widget.titulo}" → concluída = $_concluida');
   }
 
   @override
