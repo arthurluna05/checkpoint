@@ -10,3 +10,13 @@ disciplina Desenvolvimento Mobile — UNIT 2026, Prof. Petros Barreto.
 | Lab | O que entrou                                           |
 | --- | ------------------------------------------------------ |
 | 01  | Projeto criado com `flutter create`; nome e cor do app |
+
+| 02 | Ambiente completo; app rodando no Android; nome no launcher; analyze e test verdes |
+
+## Aparelho de testes
+
+| Item | Valor |
+|---|---|
+| Modelo | (preencha no Lab 04) |
+
+![Lab 02](docs/prints/lab02-template.png)
